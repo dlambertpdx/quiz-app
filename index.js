@@ -49,7 +49,7 @@ const DATA = [
 	},
 	{
 		question:
-			'In which classic arcade game do you play a knight who rides on the back of an ostrich, where if you take to long to get through a level, you have to battle a pterodactyl?',
+			'In which classic arcade game do you play a knight who rides on the back of an ostrich, where if you take too long to get through a level, you have to battle a pterodactyl?',
 		answers: ["Dragon's Lair", 'Knights of the Round', 'Galaga', 'Joust'],
 		correctAnswer: 'Joust',
 		image: 'https://thumbs.gfycat.com/DirtyMistyAntbear-max-1mb.gif',
@@ -74,7 +74,7 @@ const DATA = [
 	},
 	{
 		question:
-			'Released in 1982, what home game console was released with its own 9"x12" monitor, and came with plastic overlays to provide color and detail for it\'s black and white CRT screen?',
+			'Released in 1982, what home game console was released with its own 9"x12" monitor, and came with plastic overlays to provide color and detail for its black and white CRT screen?',
 		answers: ['Vectrex', 'Telstar', 'Intellivision', 'Atari 2600'],
 		correctAnswer: 'Vectrex',
 		image:
