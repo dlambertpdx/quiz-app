@@ -91,31 +91,40 @@ let score = 0;
 //generate question from 'DATA' object
 function generateQuestion() {
 	//if question number less than total number of questions...
+	// <h3>${DATA[questionNum].question}</h3>
 	if (questionNum < DATA.length) {
-		return `<div class="question-${questionNum}">
-    <h3>${DATA[questionNum].question}</h3>
-    <form>
-    <fieldset>
-    <label class="answerOption">
-    <input type="radio" value="${DATA[questionNum]
+		return `<div id="rg1_label" class="question-${questionNum} radiogroup" role='radiogroup' aria-labelledby='rg1_label'>
+	 <form>
+	<fieldset>
+	<legend><h3>${DATA[questionNum].question}</h3></legend>
+	<div>
+    <label for='answers' class="answerOption">
+    <input role='radio' class='answers' type="radio" value="${DATA[questionNum]
 			.answers[0]}" name="answer" required>
     <span>${DATA[questionNum].answers[0]}</span>
-    </label>
-    <label class="answerOption">
-    <input type="radio" value="${DATA[questionNum]
+	</label>
+	</div>
+	<div>
+    <label for='answers' class="answerOption">
+    <input role='radio' class='answers' type="radio" value="${DATA[questionNum]
 			.answers[1]}" name="answer" required>
     <span>${DATA[questionNum].answers[1]}</span>
-    </label>
-    <label class="answerOption">
-    <input type="radio" value="${DATA[questionNum]
+	</label>
+	</div>
+	<div>
+    <label for='answers' class="answerOption">
+    <input role='radio' class='answers' type="radio" value="${DATA[questionNum]
 			.answers[2]}" name="answer" required>
     <span>${DATA[questionNum].answers[2]}</span>
-    </label>
-    <label class="answerOption">
-    <input type="radio" value="${DATA[questionNum]
+	</label>
+	</div>
+	<div>
+    <label for='answers' class="answerOption">
+    <input role='radio' class='answers' type="radio" value="${DATA[questionNum]
 			.answers[3]}" name="answer" required>
     <span>${DATA[questionNum].answers[3]}</span>
-    </label>
+	</label>
+	</div>
     <button type="submit" class="submitButton">Submit</button>
     </fieldset>
     </form>

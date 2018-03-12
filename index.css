@@ -52,6 +52,10 @@ header ul {
   margin-top: 30px
 }
 
+legend {
+  color: #0f0;
+}
+
 /*Quiz start screen styling*/
 
 .quizStart {
