@@ -91,40 +91,31 @@ let score = 0;
 //generate question from 'DATA' object
 function generateQuestion() {
 	//if question number less than total number of questions...
-	// <h3>${DATA[questionNum].question}</h3>
 	if (questionNum < DATA.length) {
-		return `<div id="rg1_label" class="question-${questionNum} radiogroup" role='radiogroup' aria-labelledby='rg1_label'>
-	 <form>
+		return `<div class="question-${questionNum}">
+    <form>
 	<fieldset>
 	<legend><h3>${DATA[questionNum].question}</h3></legend>
-	<div>
-    <label for='answers' class="answerOption">
-    <input role='radio' class='answers' type="radio" value="${DATA[questionNum]
-			.answers[0]}" name="answer" required>
+    <label class="answerOption">
+    <input type="radio" value="${DATA[questionNum]
+				.answers[0]}" name="answer" required>
     <span>${DATA[questionNum].answers[0]}</span>
-	</label>
-	</div>
-	<div>
-    <label for='answers' class="answerOption">
-    <input role='radio' class='answers' type="radio" value="${DATA[questionNum]
-			.answers[1]}" name="answer" required>
+    </label>
+    <label class="answerOption">
+    <input type="radio" value="${DATA[questionNum]
+				.answers[1]}" name="answer" required>
     <span>${DATA[questionNum].answers[1]}</span>
-	</label>
-	</div>
-	<div>
-    <label for='answers' class="answerOption">
-    <input role='radio' class='answers' type="radio" value="${DATA[questionNum]
-			.answers[2]}" name="answer" required>
+    </label>
+    <label class="answerOption">
+    <input type="radio" value="${DATA[questionNum]
+				.answers[2]}" name="answer" required>
     <span>${DATA[questionNum].answers[2]}</span>
-	</label>
-	</div>
-	<div>
-    <label for='answers' class="answerOption">
-    <input role='radio' class='answers' type="radio" value="${DATA[questionNum]
-			.answers[3]}" name="answer" required>
+    </label>
+    <label class="answerOption">
+    <input type="radio" value="${DATA[questionNum]
+				.answers[3]}" name="answer" required>
     <span>${DATA[questionNum].answers[3]}</span>
-	</label>
-	</div>
+    </label>
     <button type="submit" class="submitButton">Submit</button>
     </fieldset>
     </form>
@@ -149,7 +140,7 @@ function incrementScore() {
 
 //start quiz
 function startQuiz() {
-	$('.quizStart').on('click', '.startButton', function(e) {
+	$('.quizStart').on('click', '.startButton', function (e) {
 		//remove start page
 		$('.quizStart').remove();
 		//display quizForm instead of start page
@@ -165,7 +156,7 @@ function renderQuestion() {
 
 //user selects answer on submit run user feedback
 function userSelectAnswer() {
-	$('form').on('submit', function(e) {
+	$('form').on('submit', function (e) {
 		e.preventDefault();
 		let selected = $('input:checked');
 		let answer = selected.val();
@@ -248,7 +239,7 @@ function renderResults() {
 
 //what happens when the user clicks next
 function nextQuestion() {
-	$('main').on('click', '.nextButton', function(e) {
+	$('main').on('click', '.nextButton', function (e) {
 		incrementQuestion();
 		renderQuestion();
 		userSelectAnswer();
@@ -257,7 +248,7 @@ function nextQuestion() {
 
 //restart quiz function - reloads page to start quiz over
 function restartQuiz() {
-	$('main').on('click', '.restartButton', function(e) {
+	$('main').on('click', '.restartButton', function (e) {
 		location.reload();
 	});
 }
